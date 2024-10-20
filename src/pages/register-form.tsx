@@ -21,7 +21,7 @@ export const RegisterForm = () => {
       resolver: zodResolver(registerSchema),
    });
 
-   const onSubmit = (data) => {
+   const onSubmit = (data: any) => {
       console.log("🚀 ~ onSubmit ~ data:", data);
    };
 

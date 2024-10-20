@@ -1,6 +1,5 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { Navigation } from "../../componnent/common/navigation/navigation";
 
 export const Dashboard = () => {
    const navigate = useNavigate();
@@ -78,6 +77,7 @@ export const Dashboard = () => {
                               border: "1px solid #FFFFFF",
                               width: "120px",
                               color: "#FFFFFF",
+                              textTransform: "none",
                            }}
                            onClick={login}
                         >
@@ -88,6 +88,7 @@ export const Dashboard = () => {
                               width: "120px",
                               backgroundColor: "#EE4622",
                               color: "#FFFFFF",
+                              textTransform: "none",
                            }}
                            onClick={register}
                         >

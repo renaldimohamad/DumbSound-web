@@ -1,13 +1,18 @@
-import { Avatar, Stack, Typography } from "@mui/material";
-import React from "react";
+import { Avatar, Stack, Typography } from "@mui/material"
 
-export const Navigation = () => {
+export const Navigation = ({bgColor, px, py, boxShadow}: any) => {
    return (
       <Stack
          direction={"row"}
          alignItems={"center"}
          justifyContent={"space-between"}
          spacing={1}
+         sx={{
+          backgroundColor: bgColor,
+          px: px,
+          py: py,
+          boxShadow: boxShadow,
+   }}
       >
          <Stack direction={"row"} alignItems={"center"} spacing={1}>
             <img

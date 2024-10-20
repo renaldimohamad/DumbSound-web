@@ -2,7 +2,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Button, Input, Stack, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { z } from "zod";
 
 const loginSchema = z.object({
@@ -24,7 +23,7 @@ export const LoginForm = () => {
       resolver: zodResolver(loginSchema),
    });
 
-   const onSubmit = (data) => {
+   const onSubmit = (data: any) => {
       console.log("🚀 ~ onSubmit ~ data:", data);
 
       if (data) {
