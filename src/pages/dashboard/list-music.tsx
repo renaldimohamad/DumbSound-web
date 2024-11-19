@@ -82,6 +82,7 @@ export const ListMusic = () => {
          sx={{
             backgroundColor: "#0D0D0D",
             height: "50vh",
+            width: "100vw",
          }}
       >
          <Typography

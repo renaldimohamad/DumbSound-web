@@ -1,14 +1,18 @@
-import { Box } from "@mui/material";
-import { Home } from "../componnent/dashboard";
+import {Box} from "@mui/material"
+import useStore from "../stores/hook"
+import {Navigate, Outlet} from "react-router-dom"
 
 const RootLayout = () => {
-   return (
-      <>
-         <Box sx={{ height: "100vh", display: "flex" }}>
-            <Home />
-         </Box>
-      </>
-   );
-};
+   const {isLogin} = useStore()
 
-export default RootLayout;
+   if (!isLogin) {
+      return <Navigate to="/home"/>
+   }
+   return (
+      <Box>
+            <Outlet />
+      </Box>
+   )
+}
+
+export default RootLayout

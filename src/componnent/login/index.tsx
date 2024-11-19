@@ -1,11 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { LoginForm } from "../../pages/login-form";
+import { LoginForm } from "../../pages/login/login-form";
+
 
 export const Login = () => {
    return (
       <>
-         <LoginForm />
+        <LoginForm />        
       </>
    );
 };

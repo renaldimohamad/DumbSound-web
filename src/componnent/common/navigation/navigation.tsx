@@ -1,18 +1,25 @@
-import { Avatar, Stack, Typography } from "@mui/material"
+import {  Box, Stack, Typography } from "@mui/material";
+import useStore from "../../../stores/hook";
+import { Dropdown } from "./dropdown";
+import { LoginForm } from "../../../pages/login/login-form";
+import { RegisterForm } from "../../../pages/register/register-form";
 
-export const Navigation = ({bgColor, px, py, boxShadow}: any) => {
+export const Navigation = ({ bgColor, px, py, boxShadow }: any) => {
+   const { isLogin } = useStore();
+   
    return (
+      <>
       <Stack
          direction={"row"}
          alignItems={"center"}
          justifyContent={"space-between"}
          spacing={1}
          sx={{
-          backgroundColor: bgColor,
-          px: px,
-          py: py,
-          boxShadow: boxShadow,
-   }}
+            backgroundColor: bgColor,
+            py: py,
+            px: px,
+            boxShadow: boxShadow,
+         }}
       >
          <Stack direction={"row"} alignItems={"center"} spacing={1}>
             <img
@@ -20,7 +27,7 @@ export const Navigation = ({bgColor, px, py, boxShadow}: any) => {
                alt="Logo"
                style={{ width: "30px", height: "30px" }}
             />
-            <Stack direction={"row"} spacing={0.5}>
+            <Stack direction={"row"}>
                <Typography sx={{ color: "#EE4622", fontWeight: "bold" }}>
                   DUMB
                </Typography>
@@ -29,11 +36,16 @@ export const Navigation = ({bgColor, px, py, boxShadow}: any) => {
          </Stack>
 
          <Stack direction={"row"} spacing={2}>
-            <Avatar
-               src="public/assets/images/Ellipse 1.png"
-               sx={{ width: 50, height: 50 }}
-            />
+            {isLogin ? (
+               <Dropdown />
+            ) : (
+               <>
+                  <LoginForm />
+                  <RegisterForm />
+               </>
+            )}
          </Stack>
       </Stack>
+      </>
    );
 };

@@ -25,16 +25,20 @@ export const PaymentDashboard = () => {
                   zIndex: 1,
                }}
             />
+        
             <Box sx={{ position: "relative", zIndex: 2 }}>
                <Box
                   sx={{
                      flexDirection: "column",
                      gap: "10px",
-                     py: 3,
-                     px: 3,
                   }}
                >
-                  <Navigation />
+                        <Navigation 
+                    bgColor={"#1F1F1F"}
+                    px={8}
+                    py={1}
+                    boxShadow={"3px 4px 15px black"}/>
+                
                </Box>
                <Box
                   sx={{
@@ -57,15 +61,42 @@ export const PaymentDashboard = () => {
                      Premium
                   </Typography>
                   <Stack mt={5}>
-                     <Typography
+                     <Box
                         sx={{
-                           color: "#FFFFFF",
-                           fontSize: "20px",
-                           lineHeight: "30px",
+                           display: "flex",
+                           flexDirection: "center",
+                           justifyContent: "center",
+                           alignItems: "center",
+                           gap: 1,
                         }}
                      >
-                        Bayar sekarang dan nikmati streaming music yang kekinian
-                     </Typography>
+                        <Typography
+                           sx={{
+                              color: "#FFFFFF",
+                              fontSize: "18px",
+                           }}
+                        >
+                           Bayar sekarang dan nikmati streaming music yang
+                           kekinian dari
+                        </Typography>
+
+                        <Stack direction={"row"}>
+                           <Typography
+                              sx={{
+                                 color: "#EE4622",
+                                 fontWeight: "bold",
+                                 fontSize: "18px",
+                              }}
+                           >
+                              DUMB
+                           </Typography>
+                           <Typography
+                              sx={{ fontWeight: "bold", fontSize: 18 }}
+                           >
+                              SOUND
+                           </Typography>
+                        </Stack>
+                     </Box>
                      <Box
                         sx={{
                            display: "flex",
@@ -77,17 +108,25 @@ export const PaymentDashboard = () => {
                         <Stack direction={"row"} mt={2} spacing={0.5}>
                            <Stack direction={"row"}>
                               <Typography
-                                 sx={{ color: "#EE4622", fontWeight: "bold" }}
+                                 sx={{
+                                    color: "#EE4622",
+                                    fontWeight: "bold",
+                                    fontSize: 18,
+                                 }}
                               >
                                  DUMB
                               </Typography>
-                              <Typography sx={{ fontWeight: "bold" }}>
+                              <Typography
+                                 sx={{ fontWeight: "bold", fontSize: 18 }}
+                              >
                                  SOUND
                               </Typography>
                            </Stack>
                            <Typography>:</Typography>
 
-                           <Typography sx={{ fontWeight: "bold" }}>
+                           <Typography
+                              sx={{ fontWeight: "bold", fontSize: 18 }}
+                           >
                               0981312323
                            </Typography>
                         </Stack>

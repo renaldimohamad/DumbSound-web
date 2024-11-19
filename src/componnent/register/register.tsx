@@ -1,4 +1,5 @@
-import { RegisterForm } from "../../pages/register-form";
+import { RegisterForm } from "../../pages/register/register-form";
+
 
 const Register = () => {
    return (
